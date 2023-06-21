@@ -8,7 +8,7 @@ const AUTHORITIES_KEY = 'AuthAuthorities';
   providedIn: 'root'
 })
 export class TokenService {
-roles: Array<String> =[];
+roles: Array<string> =[];
 
   constructor() { }
 
@@ -39,7 +39,7 @@ roles: Array<String> =[];
           this.roles.push(authority.authority);
         });
     }
-        return this.roles;
+    return this.roles;
   }
   public logOut(): void{
     window.sessionStorage.clear();
