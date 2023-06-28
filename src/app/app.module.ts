@@ -16,6 +16,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
+import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { NewExperienciaComponent } from './componentes/experiencia/newexperiencia.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,9 @@ import { LoginComponent } from './componentes/login/login.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    EditeducacionComponent,
+    NewExperienciaComponent,
+    NeweducacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,9 @@ import { LoginComponent } from './componentes/login/login.component';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
