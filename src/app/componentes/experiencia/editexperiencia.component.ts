@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia.module';
-import {SExperienciaService } from 'src/app/service/experiencia.service';
+import {ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
   selector: 'app-editexperiencia',
@@ -12,7 +12,7 @@ export class EditExperienciaComponent implements OnInit {
   experiencia: Experiencia = null;
 
   constructor(
-    private experienciaS: SExperienciaService, 
+    private experienciaS: ExperienciaService, 
     private activatedRouter: ActivatedRoute,
     private router: Router)
      { }
