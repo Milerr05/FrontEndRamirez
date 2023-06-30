@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
@@ -19,7 +20,10 @@ import { LoginComponent } from './componentes/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { EditExperienciaComponent } from './componentes/experiencia/editexperiencia.component';
 import { NewExperienciaComponent } from './componentes/experiencia/newexperiencia.component';
+import { NewSkillComponent } from './componentes/hys/new-skill.component';
+import { EditSkillComponent } from './componentes/hys/edit-skill.component'
 
 @NgModule({
   declarations: [
@@ -38,10 +42,14 @@ import { NewExperienciaComponent } from './componentes/experiencia/newexperienci
     EditeducacionComponent,
     NewExperienciaComponent,
     NeweducacionComponent,
+    NewSkillComponent,
+    EditSkillComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,

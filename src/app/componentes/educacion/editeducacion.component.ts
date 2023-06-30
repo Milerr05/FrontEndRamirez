@@ -9,7 +9,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
   styleUrls: ['./editeducacion.component.css']
 })
 export class EditeducacionComponent implements OnInit {
-  educacion: Educacion = null;
+  educacion: Educacion |null = null;
   
   constructor(
     private educacionS: EducacionService,
@@ -29,15 +29,18 @@ export class EditeducacionComponent implements OnInit {
     )
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.update(id, this.educacion).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar la educacion");
-        this.router.navigate(['']);
-      }
-    )
+    
+    if (this.educacion !== null) {
+      this.educacionS.update(id, this.educacion).subscribe(
+        data => {
+          this.router.navigate(['']);
+        }, err => {
+          alert("Error al modificar la educacion");
+          this.router.navigate(['']);
+        }
+      );
+    }
   }
 }

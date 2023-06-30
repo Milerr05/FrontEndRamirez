@@ -5,6 +5,7 @@ import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
 import { NuevoUsuario } from '../model/nuevo-usuario';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,8 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   authURL = 'https://backendramirez.onrender.com/auth/';
+
+  URL = environment.URL + 'auth/';
 
   constructor(private httpClient: HttpClient) { }
 
