@@ -1,7 +1,11 @@
 <div class="row">
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <img src="../../../assets/FotoPerfil.jpg" 
-    img-fluid id="FotodePerfil">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/editaracercade/1" *ngIf="isLogged">
+                Editarpersona
+            </button>
+        </div>
+    <img src={{persona.img}} class=" img-fluid" id="FotodePerfil">
 </div>
 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
 <h2><p>{{persona.nombre}} {{persona.apellido}}</p></h2>
@@ -11,11 +15,7 @@
     <span>
         <h1>Acerca de mí</h1>
         <p>
-            "Hola! ¡Bienvenido a mi mundo! Soy estudiante de Tecnicatura Universitaria en Química (UNER) y de Programación Web (Argentina Programa). Voy a contarte un poco acerca de mí.
-            A lo largo de mi carrera, he adquirido experiencia en química  y he tenido la oportunidad de trabajar en Laboratorios de Análisis Físico-Químicos. Ahora me encuentro incursionando en el mundo de la programación. Disfruto enfrentar desafíos creativos y encontrar soluciones innovadoras. 
-            Fuera del ámbito profesional, me gusta leer, mirar series, salir a caminar. Creo en el equilibrio entre el trabajo y la vida personal, y encontrar tiempo para disfrutar de las cosas que me apasionan es fundamental para mi bienestar y creatividad.
-            Me dedico con entusiasmo a hacer lo que me gusta y me motiva poder aprender cosas nuevas en el camino.”
-            
+            {{persona.descripcion}}
         </p>
     </span>
 </div>
